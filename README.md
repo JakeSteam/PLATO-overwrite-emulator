@@ -8,7 +8,8 @@ Quick and dirty emulator of PLATO's overwrite capability
 - [x] Use correct font
 - [ ] Populate according to text input
 - [ ] Font selector
-- [ ] Update colours to match PLATO
+- [x] Update colours to match PLATO
+- [ ] Setup GitHub Pages, subdomain, etc
 
 ## Reference
 
