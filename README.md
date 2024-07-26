@@ -10,6 +10,8 @@ Quick and dirty emulator of PLATO's overwrite capability
 - [ ] Font selector
 - [x] Update colours to match PLATO
 - [x] Setup GitHub Pages, subdomain, etc
+- [ ] Ability to load examples
+- [ ] Ability to have multiple stacked characters side by side (maybe "add character" button?)
 
 ## Reference
 

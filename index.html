@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Divs</title>
+    <title>PLATO overwrite emulator</title>
     <style>
       @font-face {
         font-family: "PlatoAscii";
@@ -19,6 +19,19 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
+      }
+
+      #ideas {
+        font-size: 1em;
+        font-family: "PlatoAscii";
+        color: #ff9000;
+      }
+
+      input[type="text"] {
+        font-size: 2em;
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+        margin-top: 1em;
       }
 
       #container {
@@ -37,17 +50,17 @@
         font-family: "PlatoAscii";
         color: #ff9000;
       }
-
-      input[type="text"] {
-        font-size: 2em;
-        padding: 0.5em;
-        margin-bottom: 1em;
-        margin-top: 1em;
-      }
     </style>
   </head>
   <body>
     <input type="text" id="textbox" placeholder="Type something..." />
+    <div id="ideas">
+      Need ideas? try `WOBTAX` or `O*$` (<a
+        href="http://www.platopeople.com/emoticons.html"
+        target="_blank"
+        >more</a
+      >)
+    </div>
     <div id="container"></div>
 
     <script>
