@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <title>PLATO overwrite emulator</title>
     <style>
       @font-face {
@@ -11,7 +12,7 @@
       }
 
       body {
-        margin: 0;
+        margin: 0 auto;
         background-color: black;
         color: white;
         display: flex;
@@ -19,21 +20,33 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
+        max-width: 90%;
       }
 
       #ideas {
-        font-size: 1em;
+        font-size: 2em;
         font-family: "PlatoAscii";
         color: #ff9000;
+        margin-bottom: 0.5em;
+        text-align: center;
+      }
+
+      #special {
+        font-size: 2em;
+        font-family: "PlatoAscii";
+        color: #ff9000;
+        margin-bottom: 0.5em;
+        text-align: center;
       }
 
       input[type="text"] {
-        font-size: 2em;
+        font-size: 3em;
         padding: 0.5em;
         margin-bottom: 0.5em;
         margin-top: 1em;
-        max-width: 90%;
         box-sizing: border-box;
+        width: 100%; /* Make the width responsive */
+        max-width: 600px; /* Set a maximum width */
       }
 
       #container {
@@ -53,10 +66,32 @@
         color: #ff9000;
       }
 
+      .characters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+      }
+
       a {
         color: white;
-        text-decoration: underline;
         cursor: pointer;
+      }
+
+      .example,
+      #link {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        #ideas,
+        #special {
+          font-size: 1em; /* Smaller font size for small screens */
+        }
+
+        input[type="text"] {
+          font-size: 1.5em; /* Adjust input font size */
+        }
       }
     </style>
   </head>
@@ -68,8 +103,13 @@
       <a class="example">"l</a> (<a
         href="http://www.platopeople.com/emoticons.html"
         target="_blank"
+        class="link"
         >more</a
       >)
+    </div>
+    <div id="special">
+      Special characters (click to add):<br />
+      <a class="characters"></a>
     </div>
     <div id="container"></div>
 
@@ -95,6 +135,22 @@
           textbox.value = link.textContent;
           textbox.dispatchEvent(new Event("input"));
         });
+      });
+
+      const charactersLink = document.querySelector("a.characters");
+      const characters =
+        "£¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÒÓÔÕÖ×ØÙÚÛÜÝàáâãäåèéêëìíîïñòóôõö÷øùúûüýþÿ".split(
+          ""
+        );
+      characters.forEach((char) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.cursor = "pointer";
+        span.addEventListener("click", () => {
+          textbox.value += char;
+          textbox.dispatchEvent(new Event("input"));
+        });
+        charactersLink.appendChild(span);
       });
     </script>
   </body>
