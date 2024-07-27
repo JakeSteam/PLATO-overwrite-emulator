@@ -23,7 +23,7 @@ exampleLinks.forEach((link) => {
 
 const charactersLink = document.querySelector("a.characters");
 const characters =
-  "£¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÒÓÔÕÖ×ØÙÚÛÜÝàáâãäåèéêëìíîïñòóôõö÷øùúûüýþÿ".split(
+  "!\"#$%&'()*/^_`|~[]{}<>«»@£¥¦§¨©ª®¬¯±°¹²³´µ¶·¸º¼½¾ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÒÓÔÕÖ×ØÙÚÛÜÝàáâãäåèéêëìíîïñòóôõö÷øùúûüýþÿ".split(
     ""
   );
 characters.forEach((char) => {
