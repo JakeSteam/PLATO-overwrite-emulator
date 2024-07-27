@@ -7,7 +7,7 @@ Quick and dirty emulator of PLATO's overwrite capability
 - [x] CSS overlapping
 - [x] Use correct font
 - [x] Populate according to text input
-- [ ] Font selector
+- [ ] ~~Font selector~~ Unneeded
 - [x] Update colours to match PLATO
 - [x] Setup GitHub Pages, subdomain, etc
 - [x] Ability to load examples

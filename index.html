@@ -5,95 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <title>PLATO overwrite emulator</title>
-    <style>
-      @font-face {
-        font-family: "PlatoAscii";
-        src: url("assets/PlatoAscii.ttf");
-      }
-
-      body {
-        margin: 0 auto;
-        background-color: black;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        max-width: 90%;
-      }
-
-      #ideas {
-        font-size: 2em;
-        font-family: "PlatoAscii";
-        color: #ff9000;
-        margin-bottom: 0.5em;
-        text-align: center;
-      }
-
-      #special {
-        font-size: 2em;
-        font-family: "PlatoAscii";
-        color: #ff9000;
-        margin-bottom: 0.5em;
-        text-align: center;
-      }
-
-      input[type="text"] {
-        font-size: 3em;
-        padding: 0.5em;
-        margin-bottom: 0.5em;
-        margin-top: 1em;
-        box-sizing: border-box;
-        width: 100%; /* Make the width responsive */
-        max-width: 600px; /* Set a maximum width */
-      }
-
-      #container {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-      }
-
-      div.character {
-        position: absolute;
-        font-size: 20em;
-        font-family: "PlatoAscii";
-        color: #ff9000;
-      }
-
-      .characters {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 100%;
-      }
-
-      a {
-        color: white;
-        cursor: pointer;
-      }
-
-      .example,
-      #link {
-        text-decoration: underline;
-      }
-
-      @media (max-width: 600px) {
-        #ideas,
-        #special {
-          font-size: 1em; /* Smaller font size for small screens */
-        }
-
-        input[type="text"] {
-          font-size: 1.5em; /* Adjust input font size */
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
     <input type="text" id="textbox" placeholder="Type something..." />
@@ -113,45 +25,13 @@
     </div>
     <div id="container"></div>
 
-    <script>
-      const textbox = document.getElementById("textbox");
-      const container = document.getElementById("container");
-
-      textbox.addEventListener("input", () => {
-        container.innerHTML = "";
-        const text = textbox.value;
-        for (let i = 0; i < text.length; i++) {
-          const charDiv = document.createElement("div");
-          charDiv.className = "character";
-          charDiv.textContent = text[i];
-          container.appendChild(charDiv);
-        }
-      });
-
-      const exampleLinks = document.querySelectorAll("a.example");
-      exampleLinks.forEach((link) => {
-        link.addEventListener("click", (event) => {
-          event.preventDefault();
-          textbox.value = link.textContent;
-          textbox.dispatchEvent(new Event("input"));
-        });
-      });
-
-      const charactersLink = document.querySelector("a.characters");
-      const characters =
-        "£¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÒÓÔÕÖ×ØÙÚÛÜÝàáâãäåèéêëìíîïñòóôõö÷øùúûüýþÿ".split(
-          ""
-        );
-      characters.forEach((char) => {
-        const span = document.createElement("span");
-        span.textContent = char;
-        span.style.cursor = "pointer";
-        span.addEventListener("click", () => {
-          textbox.value += char;
-          textbox.dispatchEvent(new Event("input"));
-        });
-        charactersLink.appendChild(span);
-      });
-    </script>
+    <div id="footer">
+      Created by <a href="https://github.com/JakeSteam">JakeSteam</a> |
+      <a href="https://github.com/jakesteam/PLATO-overwrite-emulator/"
+        >Source code</a
+      >
+      | <a href="https://www.cyber1.org/">Try PLATO</a>
+    </div>
+    <script src="assets/script.js"></script>
   </body>
 </html>
