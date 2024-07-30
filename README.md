@@ -13,7 +13,9 @@ Quick and dirty emulator of PLATO's overwrite capability
 - [x] Ability to load examples
 - [ ] Ability to have multiple stacked characters side by side (maybe "add character" button?)
 - [ ] Fix occasional "ghosting" of stacked characters
-- [ ] Ability to input PLATO specific characters (arrows etc)
+- [ ] Ability to input PLATO specific characters (e.g. arrows, and superscript characters)
+- [ ] Force display area to fill all available space
+- [ ] Add some sort of "3D preview" button to show how the layers stack up
 
 ## Reference
 

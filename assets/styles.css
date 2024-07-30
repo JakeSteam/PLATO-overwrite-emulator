@@ -15,15 +15,7 @@
           max-width: 90%;
       }
 
-      #ideas {
-          font-size: 2em;
-          font-family: "PlatoAscii";
-          color: #ff9000;
-          margin-bottom: 0.5em;
-          text-align: center;
-      }
-
-      #special {
+      #ideas, #special {
           font-size: 2em;
           font-family: "PlatoAscii";
           color: #ff9000;
@@ -34,11 +26,11 @@
       input[type="text"] {
           font-size: 3em;
           padding: 0.5em;
-          margin-bottom: 0.5em;
-          margin-top: 1em;
+          margin: 1em 0 0.5em;
           box-sizing: border-box;
           width: 100%;
-          max-width: 600px;font-family: "PlatoAscii";
+          max-width: 600px;
+          font-family: "PlatoAscii";
       }
 
       #container {
@@ -51,7 +43,7 @@
           height: 100%;
       }
 
-      div.character {
+      .character {
           position: absolute;
           font-size: 30em;
           font-family: "PlatoAscii";
@@ -82,7 +74,6 @@
       }
 
       @media (max-width: 600px) {
-
           #ideas,
           #special {
               font-size: 1em;
